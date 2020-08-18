@@ -28,14 +28,13 @@ class EmojiMemoryGame {
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis: [String] = ["🐵", "🐭", "🐰", "🦊", "🐻", "🐷", "🐝", "🐼", "🐙"]
         
-        return MemoryGame<String>(numberOfPairsOfCards: 4){ pairIndex in emojis[pairIndex] }
+        return MemoryGame<String>(numberOfPairsOfCards: Int.random(in: 2...5)){ pairIndex in emojis[pairIndex] }
     }
     
     // MARK: - Access to the Model
     
     var cards: Array<MemoryGame<String>.Card> {
-        // return model.cards
-        model.cards
+        model.cards.shuffled()
     }
     
     

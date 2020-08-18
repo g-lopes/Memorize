@@ -34,6 +34,7 @@ struct ContentView: View {
 
 struct CardView: View {
     var card: MemoryGame<String>.Card
+    var width: CGFloat = 30
     
     var body: some View {
         ZStack {
@@ -44,7 +45,7 @@ struct CardView: View {
             } else {
                 RoundedRectangle(cornerRadius: 20.0).fill()
             }
-        }
+        }.frame(width: 2*self.width, height: 3*self.width)
     }
 }
 
