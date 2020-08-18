@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameView.swift
 //  Memorize
 //
 //  Created by Guilherme Calabria Lopes on 17.08.20.
@@ -39,7 +39,7 @@ struct CardView: View {
             } else {
                 RoundedRectangle(cornerRadius: 20.0).fill()
             }
-        }.frame(width: 2*self.width, height: 3*self.width)
+        }
     }
 }
 

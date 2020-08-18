@@ -16,7 +16,6 @@ struct MemoryGame<CardContent> {
     }
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
-        // Array<Card>() inilializes an empty array
         cards = Array<Card>()
         
         for pairIndex in 0..<numberOfPairsOfCards {
@@ -26,7 +25,6 @@ struct MemoryGame<CardContent> {
         }
     }
     
-    // Namespace: MemoryGame.Card
     struct Card: Identifiable {
         var isFaceUp: Bool = true
         var isMatched: Bool = false
